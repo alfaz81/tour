@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Webpage Design</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">Alsa Tours & Travels</h2>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">SERVICE</a></li>
+                    <li><a href="#">DASHBOARD</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul>
+            </div>
+            <div class="search">
+                <input class="srch" type="search" name="" placeholder="Type To text">
+                <a href="#"> <button class="btn">Search</button></a>
+            </div>
+        </div> 
+
+        <div class="content">
+            <h1>Your Journey<br><span>Starts</span> <br>Here</h1>
+            <p class="par">Here To Get You There. We will take you anywhere. Get With Us And Get Away<br> Let us guide you on your journey of discovery. Find your next adventure in ...
+                <br>Our World class Buses.</p>
+
+            <a href="know-more.html" class="cn">Know More</a>
+
+            <div class="form">
+                <h2>Login</h2>
+                <input type="email" id="email" name="email" placeholder="Enter Email Here">
+                <input type="password" id="password" name="password" placeholder="Enter Password Here">
+                <button class="btnn" onclick="loginUser()">Login</button>
+                <p class="link">Don't have an account<br>
+                <a href="#">Sign up</a> here</p>
+                <p class="liw">Log in with</p>
+
+                <div class="icons">
+                    <a href="https://www.facebook.com"><ion-icon name="logo-facebook"></ion-icon></a>
+                    <a href="https://www.instagram.com"><ion-icon name="logo-instagram"></ion-icon></a>
+                    <a href="https://twitter.com"><ion-icon name="logo-twitter"></ion-icon></a>
+                    <a href="https://accounts.google.com/login" target="_blank">
+                        <ion-icon name="logo-google"></ion-icon>
+                    </a>
+                    <a href="https://www.skype.com"><ion-icon name="logo-skype"></ion-icon></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script>
+        function loginUser() {
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+
+            if (email.trim() === "" || password.trim() === "") {
+                alert("Email and Password are mandatory!");
+                return false;
+            }
+
+            // Example of a simple login logic
+            if (email === "user@example.com" && password === "password123") {
+                alert("Login successful!");
+                // Redirect to another page, e.g., main.html
+                window.location.href = "main.html";
+            } else {
+                alert("Invalid email or password");
+            }
+
+            return false;
+        }
+    </script>
+</body>
+</html>
